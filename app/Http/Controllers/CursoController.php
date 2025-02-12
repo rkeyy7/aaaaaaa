@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Requests\StoreJersey;
 use App\Models\Jersey;
 use Illuminate\Http\Request;
 
@@ -19,19 +20,8 @@ class CursoController extends Controller
         return view('jerseys.create');;
     }
 
-    public function store(Request $request)
+    public function store(StoreJersey $request)
     {
-
-        $request->validate([
-
-            'name' => 'required|min:3',
-            'description' => 'required',
-            'categoria' => 'required'
-
-        ]);
-
-
-
         $jersey = new Jersey();
 
         $jersey->name = $request->name;
