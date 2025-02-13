@@ -9,7 +9,7 @@
 <ul>
     @foreach ($jerseys as $jersey)
         <li>
-           <a href="{{route('jerseys.show',$jersey->id)}}"> {{$jersey->name}}</a>
+           <a href="{{route('jerseys.show',$jersey)}}"> {{$jersey->name}}</a>
         </li>
 
     @endforeach

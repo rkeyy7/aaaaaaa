@@ -24,6 +24,7 @@ class StoreJersey extends FormRequest
         return [
 
             'name' => 'required|min:3',
+            'slug' => 'required|unique:jerseys,slug|max:255',
             'description' => 'required',
             'categoria' => 'required'
 

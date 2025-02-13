@@ -10,5 +10,12 @@
 <p><strong>categoria: </strong>{{$jersey->categoria}}</p>
 <p><strong>description: </strong>{{$jersey->description}}</p>
 
+
+<form action="{{route('jerseys.destroy',$jersey)}}" method="POST">
+    @csrf
+    @method('delete')
+    <button type="submit">Eliminar</button>
+</form>
+
 @endsection
 

@@ -13,10 +13,23 @@
         <label class=" ml-5">
             Nombre:
             <br>
-            <input class="border ml-5" type="text" name="name" value="{{old('name' )}}">
+            <input class="border ml-5" type="text" name="name" value="{{old('name')}}">
         </label>
 
         @error('name')
+            <br>
+            <span> {{ $message }} </span>
+            </br>
+        @enderror
+        <br>
+
+        <label class=" ml-5">
+            slug:
+            <br>
+            <input class="border ml-5" type="text" name="slug" value="{{old('slug')}}">
+        </label>
+
+        @error('slug')
             <br>
             <span> {{ $message }} </span>
             </br>
@@ -28,7 +41,6 @@
         <label class=" ml-5">
             description:
             <br>
-
             <textarea class="border ml-5" name="description" rows="5">{{old('description')}}</textarea>
         </label>
 

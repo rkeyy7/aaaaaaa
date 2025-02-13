@@ -22,13 +22,8 @@ class CursoController extends Controller
 
     public function store(StoreJersey $request)
     {
-        $jersey = new Jersey();
 
-        $jersey->name = $request->name;
-        $jersey->description  = $request->description;
-        $jersey->categoria = $request->categoria;
-
-        $jersey->save();
+        $jersey = Jersey::create($request -> all());
         return redirect()->route('jerseys.show', $jersey);
     }
 
@@ -51,12 +46,16 @@ class CursoController extends Controller
             'categoria' => 'required'
 
         ]);
+        $jersey -> update($request-> all() );
 
-        $jersey->name = $request->name;
-        $jersey->description  = $request->description;
-        $jersey->categoria = $request->categoria;
-
-        $jersey->save();
         return redirect()->route('jerseys.show', $jersey);
     }
+
+    public function destroy(Jersey $jersey)
+    {
+        $jersey->delete();
+        return redirect()->route('jerseys.index');
+
+    }
+
 }

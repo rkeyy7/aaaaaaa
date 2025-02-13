@@ -22,6 +22,7 @@ class JerseyFactory extends Factory
     {
         return [
             'name'=> $this->faker->sentence(),
+            'slug'=>$this->faker->slug(),
             'description' =>$this->faker->paragraph(),
             'categoria' =>$this->faker->randomElement(['retro','actual'])
         ];
