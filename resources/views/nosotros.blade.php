@@ -1,10 +1,9 @@
 @extends('layouts.plantilla')
 
-@section('title','home')
+@section('title','nosotros')
 
 @section('content')
-<h1 class="text-blue">Bienvenido a Rkjersey</h1>
-
+<h1 class="">todo lo que tienes que saber sobre Rkjersey</h1>
 
 
 

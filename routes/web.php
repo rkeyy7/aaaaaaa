@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\CursoController;
+use App\Mail\contactanosMailable;
 use Illuminate\Pagination\Cursor;
 
 /*
@@ -16,6 +17,14 @@ use Illuminate\Pagination\Cursor;
 |
 */
 
-Route::get('/', HomeController::class);
+Route::get('/', HomeController::class)->name('home');
 
 Route::resource('jerseys', CursoController::class);
+
+Route::view('nosotros', 'nosotros')->name('nosotros');
+Route::get('contactanos',function(){
+
+    Mail::to('rubencg3005@gmail.com')
+        ->send(new contactanosMailable);;
+return "mensaje enviado con éxito";
+})->name('contactanos');
