@@ -12,7 +12,7 @@
     <label for="">
         name:
         <br>
-        <input class="border-2 rounded-lg" type="text" name="nombre" required>
+        <input class="border-2 rounded-lg" type="text" name="name" required>
     </label>
 
     <br>
