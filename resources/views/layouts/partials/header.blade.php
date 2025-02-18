@@ -1,11 +1,8 @@
 <header>
 
-
-
-
     <h1>RkJersey7</h1>
     <nav>
-            <li>
+            <ul>
                 <a href="{{ route('home') }}" class="{{ Route::is('home') ? 'font-bold' : '' }} text-blue-500 hover:text-blue-700">Home</a>
             </li>
             <li>
@@ -14,6 +11,12 @@
             <li>
                 <a href="{{ route('nosotros') }}" class="{{ Route::is('nosotros') ? 'font-bold' : '' }} text-blue-500 hover:text-blue-700 ">Nosotros</a>
             </li>
+            <li>
+                <a href="{{ route('contactanos.index') }}" class="{{ Route::is('contactanos.index') ? 'font-bold' : '' }} text-blue-500 hover:text-blue-700 ">contactanos</a>
+            </li>
+
+
+            </ul>
 
     </nav>
 </header>

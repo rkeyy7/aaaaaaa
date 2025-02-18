@@ -9,5 +9,10 @@
 <body>
     <h1>HOLA BROU</h1>
     <p>Este es un mensaje de prueba para mi web</p>
+
+    <p>  <strong>nombre</strong> {{$data['name']}}  </p>
+    <p>  <strong>correo</strong>  {{$data['correo']}}  </p>
+    <p>  <strong>mensaje</strong>  {{$data['mensaje']}}  </p>
+
 </body>
 </html>
