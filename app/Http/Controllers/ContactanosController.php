@@ -17,10 +17,22 @@ class ContactanosController extends Controller
 
     public function store(Request $request) {
 
+        $request-> validate([
+            'name' => 'required|min:3',
+            'correo' => 'required|email',
+            'mensaje' => 'required'
+
+        ]);
+
+
+
         Mail::to('rubencg3005@gmail.com')
         ->send(new contactanosMailable($request->all()));
 
-        return 'mensaje enviado con éxito! Gracias por contactarnos.  :D';
+
+        return redirect()->route ('contactanos.index')
+        ->with('info', 'El mensaje se ha enviado correctamente!');
+
 
     }
 
